@@ -5,20 +5,31 @@
  */
 
 #include<string>
+#include "tipoarticolo.h"
+#include <stdbool.h>
 using namespace std;
 
-class ArticoloLibreria {
+virtual class ArticoloLibreria {
 private:
 	//staticID = campo statico per incrementare automaticamente articoloID
 	static int staticID;
 	int articoloID;
+	bool disponibilita;
+	string titolo;
+	TipoArticolo tipo;
 
 public:
-	ArticoloLibreria();
+	ArticoloLibreria(int titolo, TipoArticolo tipo);
 	virtual ~ArticoloLibreria();
 
-	//metodi pure virtual da implementare nelle sottoclassi
-	virtual void toString()=0;
-	virtual string getType()=0;
+	//metodo toString pure virtual da implementare nelle sottoclassi
+	virtual string toString()=0;
+
+	int getArticoloID();
+	bool getDisponibilita();
+	string getTitolo();
+	TipoArticolo getTipo();
+	string toString();
+
 };
 

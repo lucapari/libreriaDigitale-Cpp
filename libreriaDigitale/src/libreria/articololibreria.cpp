@@ -4,9 +4,6 @@
  *      Author: Luca Parimbelli
  */
 
-#ifndef LIBRARY_ARTICOLOLIBRERIA_CPP_
-#define LIBRARY_ARTICOLOLIBRERIA_CPP_
-
 #include "articololibreria.h"
 
 #include<string>
@@ -14,11 +11,31 @@ using namespace std;
 
 int ArticoloLibreria::staticID = 0;
 
-ArticoloLibreria::ArticoloLibreria() {
+ArticoloLibreria::ArticoloLibreria(int titolo, TipoArticolo tipo) {
 	articoloID = ++staticID;
+	ArticoloLibreria::titolo = titolo;
+	ArticoloLibreria::tipo = tipo;
+
+	//un libro è disponibile appena viene inserito nel sistema
+	ArticoloLibreria::disponibilita = true;
 }
 
 ArticoloLibreria::~ArticoloLibreria() {
 }
 
-#endif /* LIBRARY_ARTICOLOLIBRERIA_CPP_ */
+int ArticoloLibreria::getArticoloID() {
+	return articoloID;
+}
+
+bool ArticoloLibreria::getDisponibilita() {
+	return disponibilita;
+}
+
+string ArticoloLibreria::getTitolo() {
+	return titolo;
+}
+
+TipoArticolo ArticoloLibreria::getTipo() {
+	return tipo;
+}
+
