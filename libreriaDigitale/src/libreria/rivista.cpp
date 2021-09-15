@@ -1,9 +1,9 @@
 /*
- * libro.cpp
+ * rivista.cpp
  *
  *      Author: Luca Parimbelli
  */
 
-#include "libro.h"
+#include "rivista.h"
 
 

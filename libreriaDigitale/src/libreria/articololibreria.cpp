@@ -9,15 +9,13 @@
 #include<string>
 using namespace std;
 
+//membro statico inzializzato nel .cpp
 int ArticoloLibreria::staticID = 0;
 
-ArticoloLibreria::ArticoloLibreria(int titolo, TipoArticolo tipo) {
-	articoloID = ++staticID;
-	ArticoloLibreria::titolo = titolo;
-	ArticoloLibreria::tipo = tipo;
-
-	//un libro è disponibile appena viene inserito nel sistema
-	ArticoloLibreria::disponibilita = true;
+//initializer list
+//alla creazione di un articolo la disponibilità viene settata a true
+ArticoloLibreria::ArticoloLibreria(string titolo, TipoArticolo tipo) :
+		articoloID(++staticID), disponibilita(true), titolo(titolo), tipo(tipo) {
 }
 
 ArticoloLibreria::~ArticoloLibreria() {

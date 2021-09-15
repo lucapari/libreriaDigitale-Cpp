@@ -7,9 +7,11 @@
 //============================================================================
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	string s = "Hello\nboh";
+	cout << s << endl; // prints !!!Hello World!!!
 	return 0;
 }

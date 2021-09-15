@@ -3,31 +3,36 @@
  *
  *      Author: Luca Parimbelli
  */
+#ifndef LIBRERIA_ARTICOLOLIBRERIA_H_
+#define LIBRERIA_ARTICOLOLIBRERIA_H_
 
 #include<string>
 #include "tipoarticolo.h"
 using namespace std;
 
+//classe astratta
 class ArticoloLibreria {
 private:
 	//staticID = campo statico per incrementare automaticamente articoloID
 	static int staticID;
+
 	int articoloID;
 	bool disponibilita;
 	string titolo;
 	TipoArticolo tipo;
 
 public:
-	ArticoloLibreria(int titolo, TipoArticolo tipo);
+	ArticoloLibreria(string titolo, TipoArticolo tipo);
 	virtual ~ArticoloLibreria();
-
-	//metodo toString pure virtual da implementare nelle sottoclassi
-	virtual string toString()=0;
 
 	int getArticoloID();
 	bool getDisponibilita();
 	string getTitolo();
 	TipoArticolo getTipo();
 
+	//metodo toString pure virtual da implementare nelle sottoclassi
+	virtual string toString()=0;
+
 };
 
+#endif /* LIBRERIA_ARTICOLOLIBRERIA_H_ */
