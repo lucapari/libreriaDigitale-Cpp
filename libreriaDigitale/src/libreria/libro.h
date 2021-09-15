@@ -7,7 +7,7 @@
 #include "articololibreria.h"
 #include <string>
 
-class Libro : public ArticoloLibreria{
+class Libro: virtual public ArticoloLibreria {
 private:
 	string autore;
 	int numPagine;

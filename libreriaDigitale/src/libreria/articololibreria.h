@@ -6,10 +6,9 @@
 
 #include<string>
 #include "tipoarticolo.h"
-#include <stdbool.h>
 using namespace std;
 
-virtual class ArticoloLibreria {
+class ArticoloLibreria {
 private:
 	//staticID = campo statico per incrementare automaticamente articoloID
 	static int staticID;
@@ -29,7 +28,6 @@ public:
 	bool getDisponibilita();
 	string getTitolo();
 	TipoArticolo getTipo();
-	string toString();
 
 };
 
