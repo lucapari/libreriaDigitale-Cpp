@@ -10,9 +10,11 @@
 #include <vector>
 #include "../libreria/articololibreria.h"
 
-//classe singleton
+//singleton
 class LibreriaManager {
+
 private:
+
 	vector<ArticoloLibreria*> vettArticoli;
 
 	LibreriaManager();
@@ -35,9 +37,19 @@ private:
 	 *
 	 * */
 
+	template<class T> vector<T> getVettSottocategoria(TipoArticolo sottocategoria);
+
 public:
-	//ritorna l'unica istanza della classe (singleton)
+	//singleton: instance() ritorna l'unica istanza della classe
 	static LibreriaManager& instance();
+
+	void aggiungiArticolo(ArticoloLibreria* articolo);
+	void rimuoviArticolo(int articoloID);
+	void prestaArticolo(int articoloID);
+	void restituisciArticolo(int articoloID);
+	void findPrintArticolo(string nomeArticolo);
+	void printAllArticoli();
+	template<class T> void printSottocategoria(vector<T> vettSottocat);
 
 };
 
