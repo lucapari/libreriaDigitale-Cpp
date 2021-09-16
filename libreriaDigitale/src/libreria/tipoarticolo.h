@@ -7,7 +7,7 @@
 #define LIBRERIA_TIPOARTICOLO_H_
 
 enum TipoArticolo {
-	Audio, Libro, Rivista, Audiolibro
+	tipoAudio, tipoLibro, tipoRivista, tipoAudiolibro
 };
 
 #endif /* TIPOARTICOLOO_H_ */

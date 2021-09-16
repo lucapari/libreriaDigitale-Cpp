@@ -25,8 +25,8 @@ int ArticoloLibreria::getArticoloID() {
 	return articoloID;
 }
 
-bool ArticoloLibreria::getDisponibilita() {
-	return disponibilita;
+string ArticoloLibreria::getDisponibilita() {
+	return (disponibilita==true) ? "true" : "false";
 }
 
 string ArticoloLibreria::getTitolo() {

@@ -15,6 +15,7 @@ private:
 	//data di pubblicazione (input in formato: DD/MM/YY)
 	string data;
 	//durata in min, sec, ore (input in formato: HHMMSS)
+	//time inserito non deve inziare con 0 altrimenti il compilatore lo tratta in ottale
 	int time;
 
 	void checkInsertData(string data);

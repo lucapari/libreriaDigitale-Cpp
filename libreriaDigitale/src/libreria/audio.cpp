@@ -5,14 +5,16 @@
  */
 
 #include "audio.h"
+#include "tipoarticoloprinter.h"
 
 Audio::Audio(string titolo, int time, string autore, string casaDiscografica) :
-		ArticoloLibreria(titolo, TipoArticolo::Audio), DateTimePub(time) {
+		ArticoloLibreria(titolo, TipoArticolo::tipoAudio), DateTimePub(time) {
 	Audio::autore = autore;
 	Audio::casaDiscografica = casaDiscografica;
 }
+
 Audio::Audio(string titolo, int time, string autore) :
-		Audio(titolo, time, autore, "") {
+		Audio(titolo, time, autore, "null") {
 }
 
 Audio::~Audio() {
@@ -27,8 +29,14 @@ string Audio::getCasaDiscografica() {
 
 //implementazione metodo astratto superclasse
 string Audio::toString() {
-	return ArticoloLibreria::getTipo() + ":\nTitolo = "
-			+ ArticoloLibreria::getTitolo() + "\nDurata = "
-			+ DateTimePub::getDurata() + "\nAutore = " + autore
-			+ "\ncasaDiscografica = " + casaDiscografica;
+	string sTipo = TipoArticoloPrinter::toString(getTipo()) + ":";
+	string sTitolo = "Titolo = " + getTitolo();
+	string sDurata = "Durata = " + getDurata();
+	string sAutore = "Autore = " + getAutore();
+	string sCasaDiscografica = "Casa discografica = " + getCasaDiscografica();
+	string sDisponibilita = "Disponibile = " + getDisponibilita();
+	string sRes = sTipo + "\n" + sTitolo + "\n" + sDurata + "\n" + sAutore
+			+ "\n" + sCasaDiscografica + "\n" + sDisponibilita + "\n";
+
+	return sRes;
 }

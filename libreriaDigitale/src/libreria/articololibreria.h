@@ -3,6 +3,7 @@
  *
  *      Author: Luca Parimbelli
  */
+
 #ifndef LIBRERIA_ARTICOLOLIBRERIA_H_
 #define LIBRERIA_ARTICOLOLIBRERIA_H_
 
@@ -26,7 +27,7 @@ public:
 	virtual ~ArticoloLibreria();
 
 	int getArticoloID();
-	bool getDisponibilita();
+	string getDisponibilita();
 	string getTitolo();
 	TipoArticolo getTipo();
 

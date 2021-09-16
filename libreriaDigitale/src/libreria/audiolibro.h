@@ -16,7 +16,7 @@ class AudioLibro: public Audio, public Libro {
 public:
 	//Aut = autore
 	AudioLibro(string titolo, string data, int time, string audioAut,
-			string libroAut, string numPagine, string casaEditrice,
+			string libroAut, string casaEditrice,
 			string casaDiscografica);
 	AudioLibro(string titolo, string data, int time, string audioAut,
 			string libroAut);

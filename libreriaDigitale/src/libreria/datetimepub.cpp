@@ -17,18 +17,20 @@ DateTimePub::DateTimePub(string data) :
 }
 
 DateTimePub::DateTimePub(int time) :
-		DateTimePub("", time) {
+		DateTimePub("null", time) {
 }
 
 DateTimePub::~DateTimePub() {
 }
 
 //controlla che il formato della data sia DD|MM|YYYY
-//se qualcosa è sbagliato inserisce "99|99|9999"
+//se qualcosa è sbagliato inserisce "00|00|0000"
 void DateTimePub::checkInsertData(string data) {
 
-	if (data.length() != 10 || data[2] != '|' || data[5] != '|')
-		DateTimePub::data = "99|99|9999";
+	if (data.length() != 10 || data[2] != '|' || data[5] != '|'){
+		DateTimePub::data = "00|00|0000";
+		return;
+	}
 
 	int dd = stoi(data.substr(0, 2));
 	int mm = stoi(data.substr(3, 5));
@@ -55,7 +57,7 @@ void DateTimePub::checkInsertData(string data) {
 	}
 
 	if (dd == 99 || mm == 99 || yy == 99)
-		DateTimePub::data = "99|99|9999";
+		DateTimePub::data = "00|00|0000";
 	else
 		DateTimePub::data = data;
 }
@@ -71,7 +73,7 @@ static int countDigitTail(int num, int sum) {
 //controlla che time abbia meno di 6 cifre
 void DateTimePub::checkInsertTime(int time) {
 	if (countDigitTail(time, 0) > 6)
-		DateTimePub::time = 999999;
+		DateTimePub::time = 0;
 	else
 		DateTimePub::time = time;
 }
