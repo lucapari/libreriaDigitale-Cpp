@@ -15,6 +15,7 @@
 using namespace std;
 int main(int argc, char **argv) {
 
+	//PROVA ISTANZIAZIONE CLASSI
 	DateTimePub d = DateTimePub("12|11|2011", 123);
 	cout << d.getDurata() << endl;
 	cout << d.getDatePub() << endl;
@@ -38,6 +39,8 @@ int main(int argc, char **argv) {
 	AudioLibro al = AudioLibro("L'insostenibile leggerezza dell'essere", "01|01|2016", 31242, "Marco Narri", "Kundera Milan", "Einaudi", "Audiolibri_Label");
 	cout<<al.toString()<<endl;
 
+
+	//PROVA BINDING DINAMICO toString()
 	ArticoloLibreria* art_riv = new Rivista("Wired", "21|06|2021", "Conde Nast Publications");
 	cout<<art_riv->toString()<<endl;
 
@@ -49,6 +52,11 @@ int main(int argc, char **argv) {
 
 	ArticoloLibreria* art_audlib = new AudioLibro("Il Conte di Montecristo", "05|06|2013", 62145, "Marco Mosso", "Alexandre Dumas", "Rizzoli", "narraLibri casa");
 	cout<<art_audlib->toString()<<endl;
+
+	//PROVA OVERLOAD == OPERATOR
+	cout<<(art_riv==art_aud)<<endl;
+	cout<<(art_riv==art_riv)<<endl;
+	cout<<(r==r)<<endl;
 
 	return 0;
 }

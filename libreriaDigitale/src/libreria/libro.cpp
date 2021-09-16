@@ -32,7 +32,7 @@ string Libro::getCasaEditrice() {
 }
 
 string Libro::toString() {
-	string sTipo = TipoArticoloPrinter::toString(getTipo()) + ":";
+	string sTipo = TipoArticoloPrinter::toString(getTipo()) + " (ID_" + to_string(getArticoloID()) + ") :";
 	string sTitolo = "Titolo = " + getTitolo();
 	string sAutore = "Autore = " + getAutore();
 	string sCasaEditrice = "Casa Editrice = " + getCasaEditrice();

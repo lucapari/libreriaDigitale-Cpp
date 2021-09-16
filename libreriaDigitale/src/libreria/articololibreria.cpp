@@ -22,18 +22,22 @@ ArticoloLibreria::~ArticoloLibreria() {
 }
 
 int ArticoloLibreria::getArticoloID() {
-	return articoloID;
+	return this->articoloID;
 }
 
 string ArticoloLibreria::getDisponibilita() {
-	return (disponibilita==true) ? "true" : "false";
+	return (this->disponibilita==true) ? "true" : "false";
 }
 
 string ArticoloLibreria::getTitolo() {
-	return titolo;
+	return this->titolo;
 }
 
 TipoArticolo ArticoloLibreria::getTipo() {
-	return tipo;
+	return this->tipo;
 }
 
+bool ArticoloLibreria::operator==(const ArticoloLibreria& rhs) const
+{
+    return this->articoloID == rhs.articoloID;
+}

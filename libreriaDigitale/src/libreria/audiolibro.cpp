@@ -32,7 +32,7 @@ string AudioLibro::getNarratore() {
 }
 
 string AudioLibro::toString() {
-	string sTipo = TipoArticoloPrinter::toString(getTipo()) + ":";
+	string sTipo = TipoArticoloPrinter::toString(getTipo()) + " (ID_" + to_string(getArticoloID()) + ") :";
 	string sTitolo = "Titolo = " + getTitolo();
 	string sAutoreLibro = "Autore Libro = " + getAutoreLibro();
 	string sNarratore = "Narratore = " + getNarratore();
