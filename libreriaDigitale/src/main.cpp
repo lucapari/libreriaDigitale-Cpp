@@ -58,8 +58,33 @@ int main(int argc, char **argv) {
 //	cout<<(art_riv==art_aud)<<endl;
 //	cout<<(art_riv==art_riv)<<endl;
 //	cout<<(r==r)<<endl;
-
+//
 	LibreriaManager::instance().printAllArticoli();
+
+	cout<<"-------------------Elimino ID 6-----------------------"<<endl<<endl;
+	LibreriaManager::instance().rimuoviArticolo(6);
+	LibreriaManager::instance().printAllArticoli();
+
+	cout<<"-------------------Presto ID 3-----------------------"<<endl<<endl;
+	LibreriaManager::instance().prestaArticolo(3);
+	LibreriaManager::instance().prestaArticolo(3);
+	LibreriaManager::instance().printAllArticoli();
+
+	cout << "-------------------Restituisco ID 3-----------------------" << endl<< endl;
+	LibreriaManager::instance().restituisciArticolo(3);
+	LibreriaManager::instance().restituisciArticolo(3);
+	LibreriaManager::instance().printAllArticoli();
+
+	cout << "-------------------Stampo articolo con ID 3-----------------------"<< endl << endl;
+	LibreriaManager::instance().printArticolo(3);
+
+	cout << "-------------------Stampo articolo titolo Wired-----------------------"<< endl << endl;
+	LibreriaManager::instance().printArticolo("Wired");
+
+	cout << "-------------------Stampo solo RIVISTE-----------------------"<< endl << endl;
+	LibreriaManager::instance().printSottocategoria<Rivista>(TipoArticolo::tipoRivista);
+
+
 
 	return 0;
 }

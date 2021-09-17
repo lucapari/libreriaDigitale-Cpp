@@ -34,7 +34,7 @@ string Audio::toString() {
 	string sDurata = "Durata = " + getDurata();
 	string sAutore = "Autore = " + getAutore();
 	string sCasaDiscografica = "Casa discografica = " + getCasaDiscografica();
-	string sDisponibilita = "Disponibile = " + getDisponibilita();
+	string sDisponibilita = "Disponibile = " + getStrDisponibilita();
 	string sRes = sTipo + "\n" + sTitolo + "\n" + sDurata + "\n" + sAutore
 			+ "\n" + sCasaDiscografica + "\n" + sDisponibilita + "\n";
 

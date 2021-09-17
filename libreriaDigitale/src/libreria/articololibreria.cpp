@@ -25,9 +25,17 @@ int ArticoloLibreria::getArticoloID() {
 	return this->articoloID;
 }
 
-string ArticoloLibreria::getDisponibilita() {
-	return (this->disponibilita==true) ? "true" : "false";
+bool ArticoloLibreria::getDisponibilita() {
+	return this->disponibilita;
 }
+
+string ArticoloLibreria::getStrDisponibilita() {
+	return (this->disponibilita == true) ? "true" : "false";
+}
+
+void ArticoloLibreria::setDisponibilita(bool disponibilita){
+	this->disponibilita=disponibilita;
+};
 
 string ArticoloLibreria::getTitolo() {
 	return this->titolo;
@@ -37,7 +45,6 @@ TipoArticolo ArticoloLibreria::getTipo() {
 	return this->tipo;
 }
 
-bool ArticoloLibreria::operator==(const ArticoloLibreria& rhs) const
-{
-    return this->articoloID == rhs.articoloID;
-}
+//bool ArticoloLibreria::operator==(const ArticoloLibreria &rhs) const {
+//	return this->articoloID == rhs.articoloID;
+//}

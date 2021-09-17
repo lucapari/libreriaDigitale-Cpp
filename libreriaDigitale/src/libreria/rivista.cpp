@@ -24,7 +24,7 @@ string Rivista::toString() {
 	string sTitolo = "Titolo = " + getTitolo();
 	string sCasaEditrice = "Casa Editrice = " + getCasaEditrice();
 	string sData = "Data = " + getDatePub();
-	string sDisponibilita = "Disponibile = " + getDisponibilita();
+	string sDisponibilita = "Disponibile = " + getStrDisponibilita();
 	string sRes = sTipo + "\n" + sTitolo + "\n" + sData + "\n" + sCasaEditrice
 			+ "\n" + sDisponibilita + "\n";
 

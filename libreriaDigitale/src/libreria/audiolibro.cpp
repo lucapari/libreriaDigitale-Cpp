@@ -40,7 +40,7 @@ string AudioLibro::toString() {
 	string sCasaEditrice = "Casa Editrice = " + getCasaEditrice();
 	string sCasaDiscografica = "Casa Discografica = " + getCasaDiscografica();
 	string sData = "Data = " + Libro::getDatePub();
-	string sDisponibilita = "Disponibile = " + getDisponibilita();
+	string sDisponibilita = "Disponibile = " + getStrDisponibilita();
 	string sRes = sTipo + "\n" + sTitolo + "\n" + sAutoreLibro + "\n"
 			+ sNarratore + "\n" + sDurata + "\n" + sCasaEditrice + "\n"
 			+ sCasaDiscografica + "\n" + sData + "\n" + sDisponibilita + "\n";

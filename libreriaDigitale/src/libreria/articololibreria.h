@@ -27,15 +27,17 @@ public:
 	virtual ~ArticoloLibreria();
 
 	int getArticoloID();
-	string getDisponibilita();
+	bool getDisponibilita();
+	string getStrDisponibilita();
+	void setDisponibilita(bool disponibilita);
 	string getTitolo();
 	TipoArticolo getTipo();
 
 	//metodo toString pure virtual da implementare nelle sottoclassi
 	virtual string toString()=0;
 
-	//overload operator==
-	bool operator==(const ArticoloLibreria& rhs) const;
+//	//overload operator==
+//	bool operator==(const ArticoloLibreria& rhs) const;
 
 };
 

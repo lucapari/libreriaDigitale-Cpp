@@ -38,7 +38,7 @@ string Libro::toString() {
 	string sCasaEditrice = "Casa Editrice = " + getCasaEditrice();
 	string sData = "Data = " + getDatePub();
 	string sNumPagine = "Pagine = " + to_string(getNumPagine());
-	string sDisponibilita = "Disponibile = " + getDisponibilita();
+	string sDisponibilita = "Disponibile = " + getStrDisponibilita();
 	string sRes = sTipo + "\n" + sTitolo + "\n" + sAutore + "\n" + sCasaEditrice
 	+"\n" + sData + "\n" + sNumPagine + "\n" + sDisponibilita + "\n";
 
