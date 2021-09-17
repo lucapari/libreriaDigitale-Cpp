@@ -50,35 +50,40 @@ void LibreriaManager::aggiungiArticolo(ArticoloLibreria *articolo) {
 void LibreriaManager::rimuoviArticolo(int articoloID) {
 	vector<ArticoloLibreria*>::iterator cercato = findArticolo(articoloID);
 	if (cercato != vettArticoli.end()) {
+		cout<<"Articolo \""<<(*cercato)->getTitolo()<<"\" rimosso correttamente! "<<endl;
 		delete(*cercato);	//evito memory leak
 		vettArticoli.erase(cercato);
 	} else {
-		cout << "** Errore! Articolo non trovato. ** " << endl;
+		cout << "Errore! Articolo non trovato." << endl;
 	}
 }
 
 
-void LibreriaManager::prestaArticolo(int articoloID) {
+void LibreriaManager::noleggiaArticolo(int articoloID) {
 	vector<ArticoloLibreria*>::iterator cercato = findArticolo(articoloID);
 	if (cercato != vettArticoli.end()) {
-		if ((*cercato)->getDisponibilita())
+		if ((*cercato)->getDisponibilita()){
 			(*cercato)->setDisponibilita(false);
+			cout<<"Articolo \""<<(*cercato)->getTitolo()<<"\" noleggiato correttamente! "<<endl;
+		}
 		else
-			cout<< "** Impossibile prestare articolo. L'articolo non è disponibile. **" <<endl;
+			cout<< "Impossibile prestare articolo. L'articolo non è disponibile." <<endl;
 	} else {
-		cout << "** Errore! Articolo non trovato. ** " << endl;
+		cout << "Errore! Articolo non trovato." << endl;
 	}
 }
 
 void LibreriaManager::restituisciArticolo(int articoloID){
 	vector<ArticoloLibreria*>::iterator cercato = findArticolo(articoloID);
 		if (cercato != vettArticoli.end()) {
-			if (!(*cercato)->getDisponibilita())
+			if (!(*cercato)->getDisponibilita()){
 				(*cercato)->setDisponibilita(true);
+				cout<<"Articolo \""<<(*cercato)->getTitolo()<<"\" restituito correttamente! "<<endl;
+			}
 			else
-				cout<< "** Impossibile restituire articolo. L'articolo è già stato restituito. **" <<endl;
+				cout<< "Impossibile restituire articolo. L'articolo è già stato restituito." <<endl;
 		} else {
-			cout << "** Errore! Articolo non trovato. ** " << endl;
+			cout << "Errore! Articolo non trovato." << endl;
 		}
 }
 
@@ -87,7 +92,7 @@ void LibreriaManager::printArticolo(int articoloID) {
 	if (cercato != vettArticoli.end()) {
 		cout << (*cercato)->toString() << endl;
 	} else {
-		cout << "** Errore! Articolo non trovato. ** " << endl;
+		cout << "Errore! Articolo non trovato." << endl;
 	}
 }
 
@@ -96,6 +101,6 @@ void LibreriaManager::printArticolo(string nomeArticolo) {
 	if (cercato != vettArticoli.end()) {
 		cout << (*cercato)->toString() << endl;
 	} else {
-		cout << "** Errore! Articolo non trovato. ** " << endl;
+		cout << "Errore! Articolo non trovato." << endl;
 	}
 }

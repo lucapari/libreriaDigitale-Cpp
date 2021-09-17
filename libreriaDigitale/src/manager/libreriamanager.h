@@ -47,7 +47,8 @@ private:
 		vector<T*> vettSottoCat;
 		for (vector<ArticoloLibreria*>::iterator i = vettArticoli.begin(); i != vettArticoli.end(); i++)
 			if ((*i)->getTipo() == sottocategoria) {
-				vettSottoCat.push_back((T*) *i);
+				T* temp = dynamic_cast<T*>(*i);
+				vettSottoCat.push_back(temp);
 			}
 		return vettSottoCat;
 	}
@@ -58,7 +59,7 @@ public:
 	void aggiungiArticolo(ArticoloLibreria *articolo);
 	void rimuoviArticolo(int articoloID);
 
-	void prestaArticolo(int articoloID);
+	void noleggiaArticolo(int articoloID);
 	void restituisciArticolo(int articoloID);
 
 	void printArticolo(int articoloID);

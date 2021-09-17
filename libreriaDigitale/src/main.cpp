@@ -12,6 +12,7 @@
 #include "libreria/audiolibro.h"
 #include "libreria/articololibreria.h"
 #include "manager/libreriamanager.h"
+#include "menuCLI/menu.h"
 
 using namespace std;
 int main(int argc, char **argv) {
@@ -59,33 +60,33 @@ int main(int argc, char **argv) {
 //	cout<<(art_riv==art_riv)<<endl;
 //	cout<<(r==r)<<endl;
 //
-	LibreriaManager::instance().printAllArticoli();
+//	LibreriaManager::instance().printAllArticoli();
 
-	cout<<"-------------------Elimino ID 6-----------------------"<<endl<<endl;
-	LibreriaManager::instance().rimuoviArticolo(6);
-	LibreriaManager::instance().printAllArticoli();
+//	cout<<"-------------------Elimino ID 6-----------------------"<<endl<<endl;
+//	LibreriaManager::instance().rimuoviArticolo(6);
+//	LibreriaManager::instance().printAllArticoli();
+//
+//	cout<<"-------------------Presto ID 3-----------------------"<<endl<<endl;
+//	LibreriaManager::instance().prestaArticolo(3);
+//	LibreriaManager::instance().prestaArticolo(3);
+//	LibreriaManager::instance().printAllArticoli();
+//
+//	cout << "-------------------Restituisco ID 3-----------------------" << endl<< endl;
+//	LibreriaManager::instance().restituisciArticolo(3);
+//	LibreriaManager::instance().restituisciArticolo(3);
+//	LibreriaManager::instance().printAllArticoli();
+//
+//	cout << "-------------------Stampo articolo con ID 3-----------------------"<< endl << endl;
+//	LibreriaManager::instance().printArticolo(3);
+//
+//	cout << "-------------------Stampo articolo titolo Wired-----------------------"<< endl << endl;
+//	LibreriaManager::instance().printArticolo("Wired");
+//
+//	cout << "-------------------Stampo solo RIVISTE-----------------------"<< endl << endl;
+//	LibreriaManager::instance().printSottocategoria<Rivista>(TipoArticolo::tipoRivista);
 
-	cout<<"-------------------Presto ID 3-----------------------"<<endl<<endl;
-	LibreriaManager::instance().prestaArticolo(3);
-	LibreriaManager::instance().prestaArticolo(3);
-	LibreriaManager::instance().printAllArticoli();
-
-	cout << "-------------------Restituisco ID 3-----------------------" << endl<< endl;
-	LibreriaManager::instance().restituisciArticolo(3);
-	LibreriaManager::instance().restituisciArticolo(3);
-	LibreriaManager::instance().printAllArticoli();
-
-	cout << "-------------------Stampo articolo con ID 3-----------------------"<< endl << endl;
-	LibreriaManager::instance().printArticolo(3);
-
-	cout << "-------------------Stampo articolo titolo Wired-----------------------"<< endl << endl;
-	LibreriaManager::instance().printArticolo("Wired");
-
-	cout << "-------------------Stampo solo RIVISTE-----------------------"<< endl << endl;
-	LibreriaManager::instance().printSottocategoria<Rivista>(TipoArticolo::tipoRivista);
-
-
+	Menu::inizializzaMenu();
+	Menu::startMenuScelta(); //metodo loop fino a inserimento numero 0
 
 	return 0;
 }
-
