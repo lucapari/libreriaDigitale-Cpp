@@ -35,10 +35,6 @@ public:
 
 	//metodo toString pure virtual da implementare nelle sottoclassi
 	virtual string toString()=0;
-
-//	//overload operator==
-//	bool operator==(const ArticoloLibreria& rhs) const;
-
 };
 
 #endif /* LIBRERIA_ARTICOLOLIBRERIA_H_ */

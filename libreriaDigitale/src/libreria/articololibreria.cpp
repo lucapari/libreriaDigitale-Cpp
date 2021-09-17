@@ -44,7 +44,3 @@ string ArticoloLibreria::getTitolo() {
 TipoArticolo ArticoloLibreria::getTipo() {
 	return this->tipo;
 }
-
-//bool ArticoloLibreria::operator==(const ArticoloLibreria &rhs) const {
-//	return this->articoloID == rhs.articoloID;
-//}
