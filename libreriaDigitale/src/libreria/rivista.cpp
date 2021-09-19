@@ -12,6 +12,9 @@ Rivista::Rivista(string titolo, string data, string casaEditrice) :
 	Rivista::casaEditrice = casaEditrice;
 }
 
+Rivista::Rivista(string titolo, string data) : Rivista(titolo,data,"null"){
+}
+
 Rivista::~Rivista() {
 }
 

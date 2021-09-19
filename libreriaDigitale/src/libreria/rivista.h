@@ -18,6 +18,7 @@ private:
 
 public:
 	Rivista(string titolo, string data, string casaEditrice);
+	Rivista(string titolo, string data);
 	~Rivista();
 
 	string getCasaEditrice();
