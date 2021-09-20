@@ -247,9 +247,12 @@ void Menu::cercaArticolo() {
 		LibreriaManager::instance().printArticolo(articoloID);
 		break;
 	case 2:
-		cout << "Inserisci ID dell'articolo che si vuole cercare >> ";
+		cout << "Inserisci nome dell'articolo che si vuole cercare >> ";
 		string nomeArticolo;
-		cin >> nomeArticolo;
+		//non posso usare cin>> altrimenti ho errori con la gestione degli spazi
+		cin.clear();
+		cin.sync();
+		getline(cin, nomeArticolo);
 		cout<<endl;
 
 		LibreriaManager::instance().printArticolo(nomeArticolo);
