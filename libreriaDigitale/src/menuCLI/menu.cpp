@@ -18,7 +18,7 @@ using namespace std;
 
 void Menu::inizializzaMenu() {
 
-	LibreriaManager::instance(); //inizializza la libreria tramite LibreriaInitializer
+	LibreriaManager::instance(); //inizializza la libreria tramite LibreriaInitializer chiamata dal costruttore di LibreriaManager
 
 	string nomeApp =
 			"  _      _ _                   _         _____  _       _ _        _      \n"
@@ -72,21 +72,28 @@ void Menu::startMenuScelta() {
 		break;
 	case 1:
 		visualizzaLibreria();
+		//terminata la chiamata alla funzione specifica, il MenuScelta viene eseguito nuovamente
+		startMenuScelta();
 		break;
 	case 2:
 		noleggiaArticolo();
+		startMenuScelta();
 		break;
 	case 3:
 		restituisciArticolo();
+		startMenuScelta();
 		break;
 	case 4:
 		cercaArticolo();
+		startMenuScelta();
 		break;
 	case 5:
 		inserisciArticolo();
+		startMenuScelta();
 		break;
 	case 6:
 		rimuoviArticolo();
+		startMenuScelta();
 		break;
 	}
 }
@@ -117,7 +124,6 @@ void Menu::visualizzaLibreria() {
 
 	switch (scelta) {
 	case 0:
-		startMenuScelta();
 		break;
 	case 1:
 		visualizzaTuttiArticoli();
@@ -236,7 +242,6 @@ void Menu::cercaArticolo() {
 
 	switch(scelta){
 	case 0:
-		startMenuScelta();
 		break;
 	case 1:
 		cout << "Inserisci ID dell'articolo che si vuole cercare >> ";
@@ -286,7 +291,6 @@ void Menu::inserisciArticolo() {
 
 	switch (scelta) {
 	case 0:
-		startMenuScelta();
 		break;
 	case 1:
 		inserisciLibro();
@@ -322,6 +326,8 @@ void Menu::inserisciLibro(){
 	cout<<"Numero pagine >>";
 	cin>>numPagine;
 
+	cout<<endl;
+
 
 	Libro* lib = new Libro(titolo, data, autore, casaEditrice, numPagine);
 
@@ -349,6 +355,8 @@ void Menu::inserisciAudio(){
 	cin >> autore;
 	cout << "Casa discografica >>";
 	cin >> casaDiscografica;
+
+	cout<<endl;
 
 	Audio *aud = new Audio(titolo, time, autore, casaDiscografica);
 
@@ -378,6 +386,8 @@ void Menu::inserisciRivista(){
 	cin >> autore;
 	cout << "Casa editrice >>";
 	cin >> casaEditrice;
+
+	cout<<endl;
 
 	Rivista *riv = new Rivista(titolo, data, casaEditrice);
 
@@ -415,6 +425,8 @@ void Menu::inserisciAudiolibro(){
 	cout << "Casa discografica >>";
 	cin >> casaDiscografica;
 
+	cout<<endl;
+
 	AudioLibro *audlib = new AudioLibro(titolo, data, time, audioAut, libroAut, casaEditrice, casaDiscografica);
 
 	LibreriaManager::instance().aggiungiArticolo(audlib);
@@ -448,5 +460,5 @@ void Menu::backToMenuScelta() {
 		cin >> scelta;
 	}
 
-	startMenuScelta();
+	cout<<endl<<endl;
 }
