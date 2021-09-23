@@ -127,22 +127,26 @@ void Menu::visualizzaLibreria() {
 		break;
 	case 1:
 		visualizzaTuttiArticoli();
+		backToMenuScelta();
 		break;
 	case 2:
 		visualizzaLibri();
+		backToMenuScelta();
 		break;
 	case 3:
 		visualizzaRiviste();
+		backToMenuScelta();
 		break;
 	case 4:
 		visualizzaAudio();
+		backToMenuScelta();
 		break;
 	case 5:
 		visualizzaAudiolibri();
+		backToMenuScelta();
 		break;
 	}
 
-	backToMenuScelta();
 }
 
 void Menu::visualizzaTuttiArticoli() {
@@ -250,6 +254,8 @@ void Menu::cercaArticolo() {
 		cout<<endl;
 
 		LibreriaManager::instance().printArticolo(articoloID);
+
+		backToMenuScelta();
 		break;
 	case 2:
 		cout << "Inserisci nome dell'articolo che si vuole cercare >> ";
@@ -261,12 +267,12 @@ void Menu::cercaArticolo() {
 		cout<<endl;
 
 		LibreriaManager::instance().printArticolo(nomeArticolo);
+
+		backToMenuScelta();
 		break;
 	}
 
 	cout<<endl;
-
-	backToMenuScelta();
 }
 void Menu::inserisciArticolo() {
 	string menuInserisci =
@@ -277,7 +283,7 @@ void Menu::inserisciArticolo() {
 					"*** 3] Inserisci nuova rivista\t\t\t\t\t***\n"
 					"*** 4] Inserisci nuovo audiolibro\t\t\t\t***\n"
 					"***\t\t\t\t\t\t\t\t***\n"
-					"*** 0] Termina il programma\t\t\t\t\t***\n"
+					"*** 0] Torna al menu principale\t\t\t\t\t***\n"
 					"***\t\t\t\t\t\t\t\t***\n"
 					"*******************************************************************";
 

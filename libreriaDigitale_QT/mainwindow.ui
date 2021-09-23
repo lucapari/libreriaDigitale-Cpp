@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>700</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>LibreriaDigitale</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="autorNameLabel">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>130</y>
+      <width>371</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Garamond</family>
+      <pointsize>27</pointsize>
+      <italic>true</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fdfdff;&quot;&gt;By Luca Parimbelli&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::MarkdownText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="applicationNameLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>40</y>
+      <width>700</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Garamond</family>
+      <pointsize>60</pointsize>
+      <italic>false</italic>
+     </font>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#fdfdff;&quot;&gt;Libreria Digitale&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignHCenter|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="widgetMenuScelta" native="true">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>200</y>
+      <width>550</width>
+      <height>330</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>30</y>
+       <width>441</width>
+       <height>293</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="visualizzaLibreriaButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="mouseTracking">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+/*black: #1C1C0A #E0E2E2 #676767*/
+/*blue: #2094FA*/
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Visualizza libreria</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="noleggiaArticoloButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Noleggia articolo</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="restituisciArticoloButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+/*black: #1C1C0A #E0E2E2 #676767*/
+/*blue: #2094FA*/
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Restituisci articolo</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cercaArticoloButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Cerca articolo</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="inserisciNuovoArticoloButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+/*black: #1C1C0A #E0E2E2 #676767*/
+/*blue: #2094FA*/
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Inserisci nuovo articolo</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="rimuoviArticoloButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+/*black: #1C1C0A #E0E2E2 #676767*/
+/*blue: #2094FA*/
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Rimuovi articolo</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widgetCercaArticolo" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>200</y>
+      <width>550</width>
+      <height>330</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>20</y>
+       <width>441</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QPushButton" name="cercaIDButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+/*black: #1C1C0A #E0E2E2 #676767*/
+/*blue: #2094FA*/
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Cerca per ID</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cercaNomeButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Cerca per Nome</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="backToMenuSceltaButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Torna al menu principale</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="widgetInserisciArticolo" native="true">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>200</y>
+      <width>550</width>
+      <height>330</height>
+     </rect>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget_4">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>30</y>
+       <width>441</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_7">
+      <item>
+       <widget class="QPushButton" name="inserisciLibroButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Inserisci nuovo libro</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="inserisciAudioButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Inserisci nuovo audio</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="inserisciRivistaButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Inserisci nuova rivista</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="inserisciAudiolibroButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Inserisci nuovo audiolibro</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="backToMenuSceltaButton_3">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{
+border-radius: 8px;
+background-color:#333333; 
+border: none;
+color: white;
+padding: 2px;
+text-align: center;
+font-size: 25px;
+font-family: &quot;Garamond&quot;;
+}
+
+:hover {
+background-color: #676767;
+}
+
+:pressed{
+border: 1px solid #E0E2E2;
+}</string>
+        </property>
+        <property name="text">
+         <string>Torna al menu principale</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <zorder>widgetMenuScelta</zorder>
+   <zorder>autorNameLabel</zorder>
+   <zorder>applicationNameLabel</zorder>
+   <zorder>widgetInserisciArticolo</zorder>
+   <zorder>widgetCercaArticolo</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>700</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
