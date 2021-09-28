@@ -35,7 +35,7 @@ public:
 	using DateTimePub::getDatePub;
 
 	//implementazione metodo astratto superclasse
-	string toString();
+	virtual string toString();
 
 };
 

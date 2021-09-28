@@ -24,21 +24,6 @@ private:
 	LibreriaManager(LibreriaManager const&) = delete;
 	void operator=(LibreriaManager const&) = delete;
 
-	/*
-	 *** Nota copy constructor e assignment operator per singleton.
-	 *
-	 * Copy constructor / Assignment operator: per il singleton non devo poterli utilizzare.
-	 * = delete, i metodi non vengono generati automaticamente.
-	 * Permette di evitare le seguenti situazioni:
-	 * 1) Copy constructor
-	 * 		LibreriaManager x = LibreriaManager::instance()
-	 *
-	 *2) Assignment operator
-	 *		LibreriaManager x
-	 *		LibreriaManager x=LibreriaManager::instance()
-	 *
-	 * */
-
 	std::vector<ArticoloLibreria*>::iterator findArticolo(int articoloID);
 	std::vector<ArticoloLibreria*>::iterator findArticolo(string nomeArticolo);
 
@@ -52,6 +37,7 @@ private:
 			}
 		return vettSottoCat;
 	}
+
 public:
 	//singleton: instance() ritorna l'unica istanza della classe
 	static LibreriaManager& instance();

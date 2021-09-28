@@ -26,9 +26,9 @@ public:
 	string getAutore();
 	string getCasaDiscografica();
 	//implementazione metodo astratto superclasse
-	string toString();
+	virtual string toString();
 
-	//rendo nuovamente pubblic getTime() di DateTimePub
+	//rendo nuovamente pubblic getDurata() di DateTimePub
 	using DateTimePub::getDurata;
 
 };
