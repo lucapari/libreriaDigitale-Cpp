@@ -8,7 +8,7 @@ La repository *libreriaDigitale-Cpp* è così strutturata:
 - `documentazione`, contiene un file *.pdf* con la documentazione del progetto
 - `libreriaDigitale`, contiene il codice della libreria digitale e un file *main.cpp* che chiama l'interfaccia a linea di comando del programma (CLI)
 - `menuQT`, contiene il codice della libreria digitale e un file *main.cpp* che chiama l'interfaccia grafica realizzata con QT Creator 5.0.0
-- `Releases` -> `QT GUI Release v1.0`, contiene la cartella `LibreriaDigitale_releaseQT.zip` che ha tutti i file necessari per poter eseguire `libreriaDigitale_QT.exe`, interfaccia grafica della libreria digitale realizzata con QT Creator 5.0.0
+- `Releases` -> `QT GUI Release v1.0`, contiene la cartella `LibreriaDigitale_releaseQT.zip` con tutti i file necessari per poter eseguire `libreriaDigitale_QT.exe`, interfaccia grafica della libreria digitale realizzata con QT Creator 5.0.0
 
 ## GUIs
 Di seguito vengono riportate due immagini che introducono all'interfaccia CLI (sinistra) e a quella realizzata con QT Creator 5.0.0 (destra)<br/><br/>![InterfacciaCLIeQT](https://user-images.githubusercontent.com/36960844/135132084-3b65a678-ad55-496b-8a2a-5ba6a264594b.JPG)
